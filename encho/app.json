@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "縁帳",
-    "slug": "encho",
+    "name": "No6",
+    "slug": "no6",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -10,49 +10,46 @@
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#F7F5F0"
+      "backgroundColor": "#0A0A0A"
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.encho.app",
+      "bundleIdentifier": "com.no6.app",
       "infoPlist": {
-        "NSCameraUsageDescription": "縁の記録に写真を撮影するために使用します",
-        "NSPhotoLibraryUsageDescription": "縁の記録に写真を選択するために使用します",
-        "NSLocationWhenInUseUsageDescription": "会った場所を自動で記録するために使用します"
+        "NSCameraUsageDescription": "商品写真を撮影するために使用します",
+        "NSPhotoLibraryUsageDescription": "写真を選択するために使用します"
       }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#F7F5F0"
+        "backgroundColor": "#0A0A0A"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false,
-      "package": "com.encho.app",
-      "permissions": [
-        "android.permission.CAMERA",
-        "android.permission.READ_EXTERNAL_STORAGE",
-        "android.permission.ACCESS_FINE_LOCATION",
-        "android.permission.ACCESS_COARSE_LOCATION"
-      ]
+      "package": "com.no6.app"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "single",
+      "name": "No6",
+      "shortName": "No6",
+      "description": "自然の叡智を、静かに選ぶ。高級はちみつブランドNo6の公式アプリ。",
+      "lang": "ja",
+      "themeColor": "#0A0A0A",
+      "backgroundColor": "#0A0A0A",
+      "display": "standalone",
+      "orientation": "portrait",
+      "startUrl": "/",
+      "scope": "/"
     },
     "plugins": [
-      [
-        "expo-image-picker",
-        {
-          "photosPermission": "縁の記録に写真を選択するために使用します",
-          "cameraPermission": "縁の記録に写真を撮影するために使用します"
-        }
-      ],
-      [
-        "expo-location",
-        {
-          "locationWhenInUsePermission": "会った場所を自動で記録するために使用します"
-        }
-      ]
-    ]
+      "expo-router"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "no6-honey-app"
+      }
+    }
   }
 }
