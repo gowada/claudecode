@@ -95,16 +95,16 @@ const styles = StyleSheet.create({
     gap: spacing.sm,
   },
 
-  // Variants
+  // Variants - No6 uses square corners (borderRadius: none)
   primary: {
     backgroundColor: colors.primary,
-    borderRadius: borderRadius.md,
+    borderRadius: borderRadius.none,
   },
   secondary: {
-    backgroundColor: colors.surface,
+    backgroundColor: colors.transparent,
     borderWidth: 1,
     borderColor: colors.primary,
-    borderRadius: borderRadius.md,
+    borderRadius: borderRadius.none,
   },
   textVariant: {
     backgroundColor: 'transparent',
@@ -112,55 +112,56 @@ const styles = StyleSheet.create({
 
   // Sizes
   largeSize: {
-    paddingVertical: spacing.md,
+    paddingVertical: spacing.lg,
     paddingHorizontal: spacing.xl,
     minHeight: 56,
   },
   mediumSize: {
-    paddingVertical: spacing.sm + 2,
-    paddingHorizontal: spacing.lg,
+    paddingVertical: spacing.md,
+    paddingHorizontal: spacing.xl,
     minHeight: 48,
   },
   smallSize: {
-    paddingVertical: spacing.xs + 2,
-    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.sm,
+    paddingHorizontal: spacing.lg,
     minHeight: 36,
   },
 
   // Disabled
   disabled: {
-    opacity: 0.5,
+    backgroundColor: colors.textMuted,
   },
 
-  // Text styles
+  // Text styles - No6 uses uppercase with letter spacing
   baseText: {
-    fontSize: typography.labelLarge.fontSize,
-    fontWeight: typography.labelLarge.fontWeight,
-    lineHeight: typography.labelLarge.lineHeight,
+    ...typography.labelLarge,
+    textTransform: 'uppercase',
+    letterSpacing: 2,
   },
   primaryText: {
-    color: colors.white,
+    color: colors.textOnDark,
   },
   secondaryText: {
     color: colors.primary,
   },
   textVariantText: {
     color: colors.primary,
+    textTransform: 'none',
+    letterSpacing: 0,
   },
 
   // Text sizes
   largeText: {
-    fontSize: typography.bodyLarge.fontSize,
-    fontWeight: '600',
-  },
-  mediumText: {
     fontSize: typography.labelLarge.fontSize,
   },
-  smallText: {
+  mediumText: {
     fontSize: typography.labelMedium.fontSize,
+  },
+  smallText: {
+    fontSize: typography.labelSmall.fontSize,
   },
 
   disabledText: {
-    opacity: 0.7,
+    color: colors.textOnDark,
   },
 });

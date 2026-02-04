@@ -47,21 +47,21 @@ export function Input({
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: spacing.md,
+    marginBottom: spacing.lg,
   },
   label: {
     ...typography.labelMedium,
     color: colors.textSecondary,
-    marginBottom: spacing.xs,
+    marginBottom: spacing.sm,
   },
   input: {
     backgroundColor: colors.surface,
     borderWidth: 1,
     borderColor: colors.border,
-    borderRadius: borderRadius.md,
+    borderRadius: borderRadius.none,
     paddingVertical: spacing.md,
     paddingHorizontal: spacing.md,
-    ...typography.bodyLarge,
+    fontSize: 16,
     color: colors.text,
   },
   multilineInput: {
